@@ -350,7 +350,7 @@ namespace larg4 {
       // Check the energy of the particle.  If it falls below the energy
       // cut, don't add it to our list.
       G4double energy = track->GetKineticEnergy();
-      if (energy < fenergyCut && pdgCode != 0) {
+      if (energy < fenergyCut) {
         fdroppedTracksMap[this->GetParentage(trackID)].insert(trackID);
         fCurrentParticle.clear();
         // do add the particle to the parent id map though
